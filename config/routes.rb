@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   resources :pins
+
+  resources :categories do
   resources :subcategories
-  resources :categories
-  resources :categories
-  devise_for :users, :controllers => { registrations: 'registrations' }
+  end
+
   
 root "pages#home"
 
