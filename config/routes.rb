@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   resources :pins
 
-  resources :categories do
-  resources :subcategories
+  resources :categories, only: [:index, :new, :create]
+  resources :categories, path: "", except: [:index, :new, :create] do
+    resources :subcategories, only: [:index, :new, :create]
+    resources :subcategories, path: "", except: [:index, :new, :create]
   end
 
   

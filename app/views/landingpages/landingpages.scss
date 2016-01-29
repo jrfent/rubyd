@@ -1,0 +1,29 @@
+// Place all the styles related to the landingpages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+	background-image: url(http://cdn.playbuzz.com/cdn/78b951b3-8ed8-4ccf-8fd8-9c96f2f1df6f/ba00bd21-25cb-4186-826e-d7584280b036.jpeg);
+	height: 100vh;
+	background-size: cover;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+}
+
+
+p {
+	max-width: 600px;
+	margin: 0 auto 20px;
+}
+
+h1 {
+	color: white;
+}
+
+h4 {
+	color: white;
+}

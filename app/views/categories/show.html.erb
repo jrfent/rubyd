@@ -5,15 +5,13 @@
   <%= @category.name %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @category.slug %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="container-fluid">
+	<div class="row">
+	<%  @subcategories.each do |subcategory| %>
+		<div class="col-md-2 col-sm-3 col-xs-5">
+		<b><%= link_to subcategory.name, category_subcategory_path(@category, subcategory)  %></b>
+		</div>
+	<% end %>
+	</div>
+</div>

@@ -7,7 +7,7 @@ class Category < ActiveRecord::Base
   before_validation :generate_slug
 
   def to_param
-    slug # or "#{id}-#{name}".parameterize
+    "#{id}-#{slug}".parameterize
   end
 
   def generate_slug
